@@ -1,15 +1,17 @@
 import React from 'react';
-import { Nav } from '../../components/Nav';
+import { Nav } from '../../components/Nav/Nav';
+import {Hero} from '../../components/Hero/Hero'
 import './App.scss';
 
 class  App extends React.Component  { 
   render (){
 
     return (
-      <div className="App"> 
+      <main className="App"> 
       <Nav /> 
+      <Hero /> 
         
-      </div>
+      </main>
     );
   }
   } 

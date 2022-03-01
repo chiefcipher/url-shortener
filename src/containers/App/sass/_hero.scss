@@ -1,0 +1,55 @@
+.hero { 
+    display: grid ;
+    grid-template-columns: 50% 50% ; 
+    grid-template-rows: auto ; 
+    padding-left : 5% ; 
+    padding-top : 2rem ; 
+    padding-bottom : 2rem ;
+
+
+    //POSITIONING 
+    &__content , 
+    &__image { 
+        grid-row : 1/2 ;
+    }
+    &__content { 
+        grid-column : 1/2 ; 
+        
+    }
+
+    &__image { 
+        grid-column: 2/3 ;
+    }
+
+
+    //STYLING
+    &__text { 
+        font-size : 7rem ; 
+        color : $c-very-dark-blue; 
+        max-width: 60rem ;
+        font-weight : 700 ; 
+        margin-top: 5rem ;
+
+
+    }
+    &__description { 
+        font-size : 1.8rem ; 
+        color : $c-grayish-violet ; 
+        margin : 1rem 0 3rem 0  ; 
+        max-width: 50rem ;
+
+
+    }
+    &__cta { 
+        font-size : 1.8rem ;
+        font-weight : 500 ;
+        padding :  1rem 3rem
+    }
+
+    &__image { 
+
+
+
+    }
+
+}
