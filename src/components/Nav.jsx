@@ -13,8 +13,8 @@ export const Nav = ()=> {
                 <li className="nav__lists--item"><a href='/#' className="no-deco">Resources</a></li>  
             </ul>
             <div className="nav__cta">
-                <a href='/#' className="no-deco">Login</a>
-                <a href='/#' className="no-deco">Sign Up</a>
+                <a href='/#' className="no-deco cta cta--login login">Login</a>
+                <a href='/#' className="no-deco cta cta--signup signup">Sign Up</a>
             </div>
         </nav> 
     )

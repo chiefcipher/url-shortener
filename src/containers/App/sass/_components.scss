@@ -1,0 +1,13 @@
+.cta { 
+
+    &--login {
+        color : $c-grayish-violet
+    }
+
+    &--signup { 
+        color : #fff  ; 
+        background :$c-cyan  ; 
+        padding : 5px 15px ;  
+        border-radius: 50px ;
+    }
+}
