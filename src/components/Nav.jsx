@@ -8,11 +8,11 @@ export const Nav = ()=> {
                 <NavLogo />
             </div>
             <ul className="nav__lists"> 
-                <li className="nav__lists--item">Features</li>  
-                <li className="nav__lists--item">Pricing</li>  
-                <li className="nav__lists--item">Resources</li>  
+                <li className="nav__lists--item"><a href='#'>Features</a></li>  
+                <li className="nav__lists--item"><a href='#'>Pricing</a></li>  
+                <li className="nav__lists--item"><a href='#'>Resources</a></li>  
             </ul>
-            <div className="nav__ctas">
+            <div className="nav__cta">
                 <a href='#'>Login</a>
                 <a href='#'>Sign Up</a>
             </div>
