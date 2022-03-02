@@ -1,0 +1,18 @@
+@mixin respond-to($break-point , $type ) { 
+    @if (  $type == 'min' ) {
+        @media (min-width: $break-point) { 
+            @content ; 
+    }
+    }
+    @else {  
+        @media (max-width: $break-point) { 
+        @content ; 
+        }
+
+   
+    }
+
+    @media (max-width : $break-point) { 
+        @content 
+    }
+}

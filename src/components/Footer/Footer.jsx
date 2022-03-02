@@ -15,28 +15,28 @@ export const Footer = ()=> {
             <div className="footer__content">
                 <div className="footer__content--heading"> Features</div> 
                 <ul className="footer__content--items">
-                    <li className="footer__content--item">Link shortening </li>
-                    <li className="footer__content--item">Branded Links </li>
-                    <li className="footer__content--item">Analytics </li>
+                    <li className="footer__content--item c-pointer">Link shortening </li>
+                    <li className="footer__content--item c-pointer">Branded Links </li>
+                    <li className="footer__content--item c-pointer">Analytics </li>
                 </ul>
             </div>
 
             <div className="footer__content">
                 <div className="footer__content--heading"> Resources </div> 
                 <ul className="footer__content--items">
-                    <li className="footer__content--item">Blog </li>
-                    <li className="footer__content--item">Developers </li>
-                    <li className="footer__content--item">Support </li>
+                    <li className="footer__content--item c-pointer">Blog </li>
+                    <li className="footer__content--item c-pointer">Developers </li>
+                    <li className="footer__content--item c-pointer">Support </li>
                 </ul>
             </div>
 
             <div className="footer__content">
                 <div className="footer__content--heading"> Company </div> 
                 <ul className="footer__content--items">
-                    <li className="footer__content--item">About </li>
-                    <li className="footer__content--item">Our Team </li>
-                    <li className="footer__content--item">Careers </li>
-                    <li className="footer__content--item">Contact </li>
+                    <li className="footer__content--item c-pointer">About </li>
+                    <li className="footer__content--item c-pointer">Our Team </li>
+                    <li className="footer__content--item c-pointer">Careers </li>
+                    <li className="footer__content--item c-pointer">Contact </li>
                 </ul>
             </div>
 
