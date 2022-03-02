@@ -1,0 +1,27 @@
+.boost { 
+    width : 100% ;  
+    padding : 6rem 2rem  ; 
+    background : linear-gradient(to right , rgba($c-dark-violet,.9) ,  rgba($c-dark-violet,.9)  ),url('../images/bg-boost-desktop.svg') ; 
+    background-size : cover ; 
+    background-position: center  ; 
+    background-repeat: no-repeat; 
+      
+    
+    @media (max-width : 600px) { 
+        background: url('../images/bg-boost-mobile.svg') ;  
+        
+    }
+    &__text { 
+        font-size : 3.5rem ; 
+        text-align: center ;  
+        margin-bottom : 30px ; 
+        color : hsl(180 , 50% , 97%) ; 
+    }
+
+    &__cta {   
+        margin : 0 auto ; 
+        padding : 10px 15px ; 
+        font-size : 2rem ;
+
+    }
+}
