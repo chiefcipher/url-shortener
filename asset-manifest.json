@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/url-shortener/static/css/main.21780aa6.css",
-    "main.js": "/url-shortener/static/js/main.61a41d91.js",
+    "main.css": "/url-shortener/static/css/main.02035b89.css",
+    "main.js": "/url-shortener/static/js/main.cf37210d.js",
     "static/js/787.23b20b20.chunk.js": "/url-shortener/static/js/787.23b20b20.chunk.js",
     "static/media/illustration-working.svg": "/url-shortener/static/media/illustration-working.c9b5ef5452363d8be3df709375d50bd0.svg",
     "static/media/logo.svg": "/url-shortener/static/media/logo.834643034343520f3b4d7e43111ed4d8.svg",
+    "static/media/icon-fully-customizable.svg": "/url-shortener/static/media/icon-fully-customizable.a1532a74fa781f6fde327313bd5ffce3.svg",
+    "static/media/icon-brand-recognition.svg": "/url-shortener/static/media/icon-brand-recognition.c349d3b69f7442e5ac3552e4138e72e7.svg",
     "static/media/bg-boost-desktop.svg": "/url-shortener/static/media/bg-boost-desktop.772154c9b0e451733f5e.svg",
+    "static/media/icon-detailed-records.svg": "/url-shortener/static/media/icon-detailed-records.265c8aea77b546e08ba3575f6a8a9f70.svg",
     "static/media/icon-instagram.svg": "/url-shortener/static/media/icon-instagram.df5873287e1c06a0fe74440f6ccd8394.svg",
     "index.html": "/url-shortener/index.html",
     "static/media/icon-pinterest.svg": "/url-shortener/static/media/icon-pinterest.a2d25ab4c70b78c4028f25323009cc58.svg",
     "static/media/bg-boost-mobile.svg": "/url-shortener/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
     "static/media/icon-twitter.svg": "/url-shortener/static/media/icon-twitter.1d5c6d5e6ab1717a500af2df0a87959a.svg",
     "static/media/icon-facebook.svg": "/url-shortener/static/media/icon-facebook.229c75a01827343aef31ae916e2ec18a.svg",
-    "main.21780aa6.css.map": "/url-shortener/static/css/main.21780aa6.css.map",
-    "main.61a41d91.js.map": "/url-shortener/static/js/main.61a41d91.js.map",
+    "main.02035b89.css.map": "/url-shortener/static/css/main.02035b89.css.map",
+    "main.cf37210d.js.map": "/url-shortener/static/js/main.cf37210d.js.map",
     "787.23b20b20.chunk.js.map": "/url-shortener/static/js/787.23b20b20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21780aa6.css",
-    "static/js/main.61a41d91.js"
+    "static/css/main.02035b89.css",
+    "static/js/main.cf37210d.js"
   ]
 }
