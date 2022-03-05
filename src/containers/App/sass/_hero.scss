@@ -4,10 +4,18 @@
     grid-template-rows: auto ; 
     padding-left : 5% ; 
     padding-top : 2rem ; 
-    padding-bottom : 2rem ;
+    padding-bottom : 10rem ;
 
-    @include respond-to('1000px' , 'max'){ 
-        grid-template-columns: 100%;
+    @media (max-width : 90rem ){
+        grid-template-columns: 55% 45% ;
+         
+    }
+    @include respond-to('750px' , 'max'){ 
+        display : flex ; 
+        padding-right : 5% ; 
+        flex-direction: column-reverse;
+        align-items: center ;
+        
     }
     //POSITIONING 
     &__content , 
@@ -19,18 +27,13 @@
     &__content { 
         grid-column : 1/2 ;   
         
-        @include respond-to('1000px' , 'max'){  
-            grid-row : 2/3  ;
-        }  
+
 
     }
 
     &__image { 
         grid-column: 2/3 ;
-        @include respond-to('1000px' , 'max'){ 
-            grid-column: 1/2 ;
-            grid-row: 1/2  ;
-        }  
+
     }
 
 
@@ -41,27 +44,75 @@
         max-width: 60rem ;
         font-weight : 700 ; 
         margin-top: 5rem ;
+        text-align: left ;
+
+        @include respond-to('900px' , 'max'){ 
+           font-size : 6.5rem ; 
+        }
+
+        @include respond-to('750px' ,'max') { 
+            font-size: 5rem ;
+            text-align: center ;
+            margin : 5rem auto 2rem auto ; 
+            max-width: 550px ;
+        }
+
+
+
+
 
 
     }
     &__description { 
         font-size : 1.8rem ; 
         color : $c-grayish-violet ; 
-        margin : 1rem 0 3rem 0  ; 
         max-width: 50rem ;
+        margin : 1rem 0 3rem 0  ; 
+        text-align: left ;
+        line-height: 200%;
+
+        @include respond-to('750px' , 'max'){ 
+            font-size : 1.6rem ; 
+            text-align: center ;
+            margin : 2rem  auto ;
+        }
+
 
 
     }
     &__cta { 
         font-size : 1.8rem ;
         font-weight : 500 ;
-        padding :  1rem 3rem
+        padding :  1rem 3rem ; 
+
+        @include respond-to('750px' , 'max'){ 
+            margin : 0 auto ; 
+        }
+
     }
 
     &__image { 
-
+       
+        @include respond-to('750px', 'max') { 
+            width : 600px ; 
+            height : 394.54px ; 
         
+            img { 
+                width: 100% ; 
+                height : 100% ; 
+            }
+        }
 
-    }
+        @include respond-to('500px', 'max') { 
+            width : 350px ; 
+            height : 230.15px ; 
+        
+          
+        }
+
+      
+
+
+        }
 
 }
