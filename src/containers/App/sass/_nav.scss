@@ -2,7 +2,9 @@
     display: flex ; 
     flex-direction: row ; 
     justify-content: space-between; 
+    align-items: baseline ;
     width : 90%  ;
+
     margin : 3rem  auto ;
     font-size : 1.6rem ; 
     font-weight: 500 ; 
@@ -10,34 +12,94 @@
 
 
     &__icon { 
-        margin-right : 5rem ; 
+        margin-right: 5rem ;
+    }
+    &__toggle-logo { 
+        display:  none ;
 
+        @media (max-width : 750px ) { 
+            display: block ;
+        }
+    }
+
+    &__rhs { 
+        width : 100% ; 
+        display: flex ; 
+        flex-direction: row ;
+        justify-content: space-between ;
+
+
+        @media (max-width : 750px ) { 
+            display: block ;  
+            position : absolute ; 
+            top : 9rem ; 
+            left : 50% ; 
+            transform: translateX(-50%);
+            width : 90% ; 
+            border-radius: 9px ;;
+            text-align: center ;
+            background : $c-dark-violet  ; 
+            color : #fff ; 
+
+
+        }
     }
     &__lists { 
         list-style: none ;
         display: flex ; 
         flex-direction: row ;
-        margin-right : auto ;
+        
+       
+        @media (max-width : 750px ) { 
+            display: block ;  
+        }
 
         &--item { 
 
+            @media (max-width : 750px ) { 
+                margin : 3rem  0 ;  
+            }
             a { 
-                color : $c-grayish-violet
+                color : $c-grayish-violet ; 
+                @media (max-width : 750px ) { 
+                    color : #fff ;  
+                }
             }
             &:nth-child(2) { 
                 margin : 0 3rem;
+                @media (max-width : 750px ) { 
+                    margin : 0 ;  
+                }
             }
 
         }
     } 
 
     &__cta{ 
+
+        @media (max-width : 750px ) { 
+            display: flex ;
+            flex-direction: column ; 
+            align-items: center; 
+            border-top: 1px solid #fff ;
+            width : 90% ; 
+            margin : 0 auto ; 
+        }
         .login { 
             margin-right : 3rem ;
+         
+
         }
 
         .signup { 
             padding : 1.3rem 2.5rem ;
+        }
+
+        .login , 
+        .signup { 
+            @media (max-width : 750px ) { 
+                margin : 2rem 0 ;
+            }
         }
     }
 }

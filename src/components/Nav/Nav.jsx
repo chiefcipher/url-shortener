@@ -1,21 +1,30 @@
 import React from "react"
 import {ReactComponent as NavLogo } from './logo.svg'
+import MenuLogo from './001-menu.png'
+
 
 export const Nav = ()=> { 
+    const navItems = ['Features' , 'Pricing' , 'Resources ']
+
     return ( 
         <nav className='nav'>
             <div className="nav__icon"> 
                 <NavLogo />
             </div>
-            <ul className="nav__lists"> 
-                <li className="nav__lists--item"><a href='/#' className="no-deco">Features</a></li>  
-                <li className="nav__lists--item"><a href='/#' className="no-deco">Pricing</a></li>  
-                <li className="nav__lists--item"><a href='/#' className="no-deco">Resources</a></li>  
+            <div className="nav__rhs"> 
+                {/* rhs signifies right hand side  */}
+                <ul className="nav__lists"> 
+                { navItems.map(item => ( 
+                <li className="nav__lists--item" key={item}><a href='/#' className="no-deco">{item}</a></li>  
+                ))} 
             </ul>
             <div className="nav__cta">
                 <a href='/#' className="no-deco cta cta--login login">Login</a>
                 <a href='/#' className="no-deco cta cta--signup signup">Sign Up</a>
             </div>
+            </div>
+            
+            <img src={MenuLogo} width='35' height='35' className="nav__toggle-logo"/> 
         </nav> 
     )
 }
