@@ -1,0 +1,40 @@
+.shorten { 
+    width : 100% ; 
+    margin : 0 auto ; 
+    height : 15rem ; 
+    margin-top : -75px ;
+    background-position: center ;
+    background : linear-gradient(45deg , rgba($c-dark-violet ,.9 ) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-desktop.svg') no-repeat ; 
+    background-size: cover   ; 
+    display: flex ; 
+    justify-content: space-between;
+    align-items: center ;
+    padding : 4rem ;
+    border-radius: 10px ;
+    @media (max-width : 750px ) { 
+        background : linear-gradient(45deg , rgba($c-dark-violet ,.9) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-mobile.svg') no-repeat ; 
+
+    }
+    &__text-area,
+    &__cta { 
+        font-size : 1.8rem ; 
+        font-family: 'Poppins'; 
+        outline : none  ; 
+        border : none ; 
+    }
+
+    &__text-area { 
+        padding : 1.5rem 2rem  ; 
+        border-radius: 1rem  ;
+        flex:  1 ;
+        
+    }
+
+    &__cta { 
+        margin-left : 2rem ; 
+        border-radius: 1rem  ;
+        padding : 1.5rem 5rem ; 
+        background : $c-cyan ; 
+        color : #fff ; 
+    }
+}

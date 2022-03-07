@@ -2,10 +2,12 @@ import React from 'react' ;
 import {ReactComponent as IconRecognition} from './icon-brand-recognition.svg'
 import {ReactComponent as IconDetailed} from './icon-detailed-records.svg'
 import { ReactComponent as IconCustomizable } from './icon-fully-customizable.svg';
+import { Shorten } from './Shorten/Shorten'; 
 
 export const Advanced = props => { 
     return ( 
         <section className='advanced' > 
+            <Shorten /> 
             <h1 className='advanced__heading'> 
                 Advanced Statistics 
             </h1>

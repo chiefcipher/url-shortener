@@ -25,7 +25,7 @@ export const Nav = (props)=> {
             </div>
             </div>
             
-            <img src={MenuLogo} width='35' height='35' className="nav__toggle-logo" onClick={props.toggleMobileNav}/> 
+            <img src={MenuLogo} alt='menu logo' width='35' height='35' className="nav__toggle-logo" onClick={props.toggleMobileNav}/> 
         </nav> 
     )
 }
