@@ -1,9 +1,6 @@
 import React from "react";
 
 export const Shorten  = props => { 
-    {
-        console.log(props , 'from shorten')
-    }
     return ( 
         <div className="shorten" > 
             <div className="shorten__cta-container" > 

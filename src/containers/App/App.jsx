@@ -5,6 +5,7 @@ import { Advanced } from '../../components/Advanced/Advanced';
 import {Boost} from '../../components/Boost/Boost' 
 import { Footer } from '../../components/Footer/Footer';
 import './App.scss';
+import axios from 'axios';
 
 class  App extends React.Component  { 
   state = { 
@@ -35,8 +36,14 @@ class  App extends React.Component  {
   }
   componentDidMount() {
     this.handleResize()
+
     window.addEventListener('resize' ,this.handleResize)
-     
+    
+    axios.get('https://api.shrtco.de/v2/shorten' , {
+      params : {
+        url : 'https://chiefcipher.netlify.app'
+      } }).then (response => console.log(response) ) 
+    .catch(e => {throw new Error("Couldn't get data, try again")})
      
   }
   handleResize = ()=> { 
