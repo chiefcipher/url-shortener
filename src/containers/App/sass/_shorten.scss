@@ -7,13 +7,21 @@
     background : linear-gradient(45deg , rgba($c-dark-violet ,.9 ) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-desktop.svg') no-repeat ; 
     background-size: cover   ; 
     display: flex ; 
+    flex-direction: row ;
     justify-content: space-between;
     align-items: center ;
     padding : 4rem ;
     border-radius: 10px ;
+
+
     @media (max-width : 750px ) { 
         background : linear-gradient(45deg , rgba($c-dark-violet ,.9) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-mobile.svg') no-repeat ; 
-
+        background-size: cover   ; 
+        
+        height : 20rem ; 
+        margin-top: -10rem ; ;
+        display: block ;
+        ;
     }
     &__text-area,
     &__cta { 
@@ -21,12 +29,18 @@
         font-family: 'Poppins'; 
         outline : none  ; 
         border : none ; 
+
+        @media (max-width : 750px ) { 
+            width : 100% ; 
+        }
     }
 
     &__text-area { 
         padding : 1.5rem 2rem  ; 
         border-radius: 1rem  ;
-        flex:  1 ;
+        flex:  1 1 auto ;
+
+
         
     }
 
@@ -36,5 +50,9 @@
         padding : 1.5rem 5rem ; 
         background : $c-cyan ; 
         color : #fff ; 
+        
+        @media (max-width : 750px ) { 
+            margin : 2rem auto ; 
+        }
     }
 }
