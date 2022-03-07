@@ -11,6 +11,26 @@ class  App extends React.Component  {
     nav : { 
       widthForMobileDevice : false , 
       showMobileNav : false 
+    }, 
+    shortenURL : { 
+      value : "" , 
+      shortened : [
+        {  mainURL : 'http://localhost:3000/url-shortener' ,
+          shortenedURL : 'https://rel.link/kkkdkdk' , 
+          statusText : 'Copied' , 
+          id: '2334' },
+
+          {  mainURL : 'http://localhost:3000/url-shortener' ,
+          shortenedURL : 'https://rel.link/kkkdkdk' , 
+          statusText : 'Copied' , 
+          id: '2334' },
+
+          {  mainURL : 'http://localhost:3000/url-shortener' ,
+          shortenedURL : 'https://rel.link/kkkdkdk' , 
+          statusText : 'Copied' , 
+          id: '2334' },
+        
+      ] 
     }
   }
   componentDidMount() {
@@ -34,6 +54,7 @@ class  App extends React.Component  {
     return true 
   }
 
+
   toggleMobileNav = ()=> { 
     this.setState(prevState => { 
       return { 
@@ -44,12 +65,22 @@ class  App extends React.Component  {
       }
     })
   }
+
+  shortenInputChange = (event)=> { 
+    this.setState(prevState => ({
+      ...prevState, 
+      shortenURL : { 
+        ...this.state.shortenURL , 
+        value : event.target.value
+      }
+    }))
+  }
   render (){
     return (
       <main className="App"> 
       <Nav isMobileDevice={this.state.nav.widthForMobileDevice} showMobileNav={this.state.nav.showMobileNav} toggleMobileNav={this.toggleMobileNav}/> 
       <Hero /> 
-      <Advanced /> 
+      <Advanced shortenedURL={this.state.shortenURL.shortened} shortenInputValue={this.state.shortenURL.value} handleInputChange={this.shortenInputChange}/> 
       <Boost />  
       <Footer /> 
       </main>

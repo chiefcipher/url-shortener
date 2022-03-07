@@ -7,7 +7,7 @@ import { Shorten } from './Shorten/Shorten';
 export const Advanced = props => { 
     return ( 
         <section className='advanced' > 
-            <Shorten /> 
+            <Shorten {...props } /> 
             <h1 className='advanced__heading'> 
                 Advanced Statistics 
             </h1>
