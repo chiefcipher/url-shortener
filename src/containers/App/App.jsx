@@ -15,21 +15,22 @@ class  App extends React.Component  {
   }
   componentDidMount() {
     this.handleResize()
-    window.addEventListener('resize' ,this.handleResize())
+    window.addEventListener('resize' ,this.handleResize)
      
      
   }
   handleResize = ()=> { 
-    if (window.innerWidth < 750 ) { 
+    const isForMobile = window.innerWidth < 750 ? true : false 
+    
       this.setState({
         nav : { 
           ...this.state.nav , 
-          widthForMobileDevice : true  
+          widthForMobileDevice : isForMobile
         }
       })
-    }
   }
   shouldComponentUpdate(nextProps , nextState) { 
+    console.log(['nextstate'] , nextState)
     return true 
   }
 
