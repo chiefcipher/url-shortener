@@ -7,11 +7,40 @@ import { Footer } from '../../components/Footer/Footer';
 import './App.scss';
 
 class  App extends React.Component  { 
-  render (){
+  state = { 
+    nav : { 
+      widthForMobileDevice : false , 
+      showMobileNav : false 
+    }
+  }
+  componentDidMount() {
+     if (window.innerWidth < 750 ) { 
+       this.setState({
+         nav : { 
+           ...this.state.nav , 
+           widthForMobileDevice : true  
+         }
+       })
+     }
+  }
+  shouldComponentUpdate(nextProps , nextState) { 
+    return true 
+  }
 
+  toggleMobileNav = ()=> { 
+    this.setState(prevState => { 
+      return { 
+        nav :  { 
+          ...this.state.nav , 
+          showMobileNav : !prevState.nav.showMobileNav 
+        }
+      }
+    })
+  }
+  render (){
     return (
       <main className="App"> 
-      <Nav /> 
+      <Nav isMobileDevice={this.state.nav.widthForMobileDevice} showMobileNav={this.state.nav.showMobileNav} toggleMobileNav={this.toggleMobileNav}/> 
       <Hero /> 
       <Advanced /> 
       <Boost />  
