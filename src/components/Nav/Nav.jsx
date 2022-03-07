@@ -12,7 +12,7 @@ export const Nav = (props)=> {
             <div className="nav__icon"> 
                 <NavLogo />
             </div>
-            <div className="nav__rhs" style={{display : (props.isMobileDevice && props.showMobileNav) ? 'block' : 'none' }}> 
+            <div className="nav__rhs" style={{display : !props.isMobileDevice ? 'flex' : props.isMobileDevice && props.showMobileNav ? 'block' : 'none' }}> 
             {/* rhs signifies right hand side  */}
                 <ul className="nav__lists"> 
                 { navItems.map(item => ( 

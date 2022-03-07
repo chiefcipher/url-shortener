@@ -14,14 +14,20 @@ class  App extends React.Component  {
     }
   }
   componentDidMount() {
-     if (window.innerWidth < 750 ) { 
-       this.setState({
-         nav : { 
-           ...this.state.nav , 
-           widthForMobileDevice : true  
-         }
-       })
-     }
+    this.handleResize()
+    window.addEventListener('resize' ,this.handleResize())
+     
+     
+  }
+  handleResize = ()=> { 
+    if (window.innerWidth < 750 ) { 
+      this.setState({
+        nav : { 
+          ...this.state.nav , 
+          widthForMobileDevice : true  
+        }
+      })
+    }
   }
   shouldComponentUpdate(nextProps , nextState) { 
     return true 
