@@ -1,6 +1,6 @@
 import React from "react"; 
-import { ReactComponent as Illustration } from "./illustration-working.svg";
 import IllustrationLogo from './illustration-working.svg'
+
 export const Hero = ()=> { 
     return ( 
         <section className="hero">
@@ -15,7 +15,7 @@ export const Hero = ()=> {
             </div>
         </div>
         <div className="hero__image">
-            <img src={IllustrationLogo} /> 
+            <img src={IllustrationLogo} alt=""/> 
         </div>
         </section>
     )

@@ -2,7 +2,8 @@
     display: flex ; 
     flex-direction: row ; 
     justify-content: space-between; 
-    align-items: baseline ;
+    align-items: flex-start;
+    height : fit-content ; 
     width : 90%  ;
 
     margin : 3rem  auto ;
@@ -27,6 +28,7 @@
         display: flex ; 
         flex-direction: row ;
         justify-content: space-between ;
+        align-items : center ; 
 
 
         @media (max-width : 750px ) { 
