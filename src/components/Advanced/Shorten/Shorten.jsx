@@ -5,7 +5,7 @@ export const Shorten  = props => {
         <div className="shorten" > 
             <div className="shorten__cta-container" > 
                 <input value={props.shortenInputValue} onChange={props.handleInputChange} type='text' className="shorten__text-area" placeholder="Shorten a link here" /> 
-                <button className="shorten__cta "> Shorten it!</button>
+                <button className="shorten__cta " onClick={props.clickShortenBtn}> Shorten it!</button>
 
             </div>
             
