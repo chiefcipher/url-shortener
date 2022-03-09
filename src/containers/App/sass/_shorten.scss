@@ -1,10 +1,11 @@
 .shorten { 
     width : 100% ; 
     height : fit-content ; 
+    // transform: translateY(-75px); TODO
 
     &__cta-container { 
         height : 15rem ; 
-        margin-top : -75px ;
+        margin : -7.5rem auto 0 auto  ;  
         background-position: center ;
         background : linear-gradient(45deg , rgba($c-dark-violet ,.9 ) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-desktop.svg') no-repeat ; 
         background-size: cover   ; 
@@ -14,7 +15,6 @@
         align-items: center ;
         padding : 4rem ;
         border-radius: 10px ;
-        margin : 0 auto ; 
 
 
         @media (max-width : 750px ) { 
@@ -82,7 +82,7 @@
         padding :20px ;  
         margin : 10px 0 ; 
         border-radius : 1rem ;;
-        box-shadow: 0 0 2px rgba($c-dark-violet , .2);
+        box-shadow: 0 0 2px rgba($c-dark-violet , .2); 
 
         @media(max-width : 800px ) {
             flex-direction: column ;
@@ -90,11 +90,15 @@
        
         .main-url { 
             margin-right: auto ;
+            white-space: pre-wrap;
+            word-break: break-word;
             color : $c-very-dark-violet  ; 
+            
         }
 
         .shortened-url { 
             margin-right: 5rem ;
+            margin-left: 2rem ;
             color  : $c-cyan ; 
             
             @media(max-width : 800px ) {

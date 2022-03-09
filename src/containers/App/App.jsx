@@ -16,12 +16,12 @@ class  App extends React.Component  {
     shortenURL : { 
       value : "" , 
       shortened : [
-        /* {  
-          mainURL : 'http://localhost:3000/url-shortener' ,
+        {  
+          mainURL : 'http://https%3A%2F%2Fwww.geeksforgeeks.org%2F' ,
           shortenedURL : 'https://rel.link/kkkdkdk' , 
           statusText : 'Copied' , 
           id: '2334' },
-
+ /*
           {  mainURL : 'http://localhost:3000/url-shortener' ,
           shortenedURL : 'https://rel.link/kkkdkdk' , 
           statusText : 'Copied' , 
@@ -73,7 +73,7 @@ class  App extends React.Component  {
       ...prevState, 
       shortenURL : { 
         ...this.state.shortenURL , 
-        value : event.target.value
+        value : event.target.value.trim()
       }
     }))
   }
@@ -85,6 +85,7 @@ class  App extends React.Component  {
     metod :'get' , 
     url : 'https://api.shrtco.de/v2/shorten' , 
     params : {url : url}  ,  
+
     
     }).then (response => response.data.result) 
       .then (data => {
