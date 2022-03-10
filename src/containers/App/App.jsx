@@ -15,13 +15,14 @@ class  App extends React.Component  {
     }, 
     shortenURL : { 
       value : "" , 
+      showError : false , 
       shortened : [
-        {  
+        /*{  
           mainURL : 'http://https%3A%2F%2Fwww.geeksforgeeks.org%2F' ,
           shortenedURL : 'https://rel.link/kkkdkdk' , 
           statusText : 'Copied' , 
           id: '2334' },
- /*
+        
           {  mainURL : 'http://localhost:3000/url-shortener' ,
           shortenedURL : 'https://rel.link/kkkdkdk' , 
           statusText : 'Copied' , 
@@ -69,18 +70,35 @@ class  App extends React.Component  {
   }
 
   shortenInputChange = (event)=> { 
+    let errorState = true  ; 
+    console.log('length is ' , event.target.value.trim().length)
+    if (event.target.value.trim().length > 0  ) { 
+      errorState = false 
+    }
     this.setState(prevState => ({
       ...prevState, 
       shortenURL : { 
         ...this.state.shortenURL , 
+        showError : errorState , 
         value : event.target.value.trim()
       }
     }))
   }
 
   shortenURL = ()=> { 
-    const url  = encodeURIComponent(this.state.shortenURL.value) 
-   
+    let url  = this.state.shortenURL.value 
+
+    if (url.length === 0 ) { 
+        this.setState(prevState => ({
+          shortenURL : {
+            ...prevState.shortenURL ,
+            showError : true  }
+           
+        })) 
+
+        return 
+    }
+
     axios({
     metod :'get' , 
     url : 'https://api.shrtco.de/v2/shorten' , 
@@ -108,12 +126,34 @@ class  App extends React.Component  {
      
 
   }
+
+  copyURLHandler = (urlId) => { 
+    console.log("clicked copy for ", urlId)  
+
+    const urlClicked = this.state.shortenURL.shortened.find(item => item.id === urlId)
+    const urlClickedIndex = this.state.shortenURL.shortened.findIndex(item => item.id === urlId)
+    
+    if (navigator.clipboard.writeText(urlClicked.shortenedURL)) { 
+      urlClicked.statusText =  'Copied' ; 
+      const shortened = [...this.state.shortenURL.shortened] 
+      shortened[urlClickedIndex] = urlClicked  ; 
+
+      this.setState(prevState => ( { 
+        ...prevState , 
+        shortenedURL : { 
+          value : '' , 
+          shortened : shortened
+        }
+      }))
+      console.log('copied')
+    }
+  }
   render (){
     return (
       <main className="App"> 
       <Nav isMobileDevice={this.state.nav.widthForMobileDevice} showMobileNav={this.state.nav.showMobileNav} toggleMobileNav={this.toggleMobileNav}/> 
       <Hero /> 
-      <Advanced clickShortenBtn={this.shortenURL} shortenedURL={this.state.shortenURL.shortened} shortenInputValue={this.state.shortenURL.value} handleInputChange={this.shortenInputChange}/> 
+      <Advanced showError={this.state.shortenURL.showError} clickCopy={this.copyURLHandler} clickShortenBtn={this.shortenURL} shortenedURL={this.state.shortenURL.shortened} shortenInputValue={this.state.shortenURL.value} handleInputChange={this.shortenInputChange}/> 
       <Boost />  
       <Footer /> 
       </main>

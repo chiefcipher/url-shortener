@@ -1,7 +1,6 @@
 .shorten { 
     width : 100% ; 
     height : fit-content ; 
-    // transform: translateY(-75px); TODO
 
     &__cta-container { 
         height : 15rem ; 
@@ -9,19 +8,23 @@
         background-position: center ;
         background : linear-gradient(45deg , rgba($c-dark-violet ,.9 ) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-desktop.svg') no-repeat ; 
         background-size: cover   ; 
-        display: flex ; 
-        flex-direction: row ;
-        justify-content: space-between;
-        align-items: center ;
-        padding : 4rem ;
+
+        display: grid ; 
+        grid-template-columns: 70% 30% ;
+        grid-column-gap: 20px  ;
+        grid-template-rows: min-content; 
+        justify-content: center; 
+        align-content: center ;
+        padding : 3rem 4rem ;
         border-radius: 10px ;
-
-
+        
+        
         @media (max-width : 750px ) { 
             background : linear-gradient(45deg , rgba($c-dark-violet ,.9) , rgba($c-dark-violet , .9) ),url('../images/bg-shorten-mobile.svg') no-repeat ; 
             background-size: cover   ; 
             
             height : 20rem ; 
+            height : fit-content ; 
             margin-top: -10rem ; ;
             display: block ;
             ;
@@ -42,33 +45,43 @@
     }
 
     &__text-area { 
+        grid-column: 1/2 ; 
+        grid-row : 1/2 ;
         padding : 1.5rem 2rem  ; 
         border-radius: 1rem  ;
-        flex:  1 1 auto ;
-
 
         
     }
 
     &__cta { 
-        margin-left : 2rem ; 
         border-radius: 1rem  ;
-        padding : 1.5rem 5rem ; 
+        padding : 1.5rem 4rem ; 
         background : $c-cyan ; 
         color : #fff ; 
-        flex:  0 1 200px  ;
+
+        grid-column : 2/3 ;
+        grid-row  :1/2 ;
 
         
         @media (max-width : 750px ) { 
-            margin : 2rem auto ; 
+            margin : 2rem auto 0 auto  ; 
         }
     }
 
+    &__error { 
+        grid-row : 2/3 ; 
+        grid-column: 1/2 ;
+        color : $c-red  ; 
+        font-size : 1.4rem ;
+
+    }
     &__urls { 
         list-style: none ; 
         width: 100% ;
 
     }
+
+
 
     &__url { 
         display:  flex ; 
