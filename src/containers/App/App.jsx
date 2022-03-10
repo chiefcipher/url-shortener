@@ -53,7 +53,6 @@ class  App extends React.Component  {
       })
   }
   shouldComponentUpdate(nextProps , nextState) { 
-    console.log(['nextstate'] , nextState)
     return true 
   }
 
@@ -71,7 +70,6 @@ class  App extends React.Component  {
 
   shortenInputChange = (event)=> { 
     let errorState = true  ; 
-    console.log('length is ' , event.target.value.trim().length)
     if (event.target.value.trim().length > 0  ) { 
       errorState = false 
     }
@@ -121,14 +119,13 @@ class  App extends React.Component  {
                 }
              }
           })
-        console.log(data)}  ) 
+        }  ) 
     .catch(e => {throw new Error("Couldn't get data, try again")})
      
 
   }
 
   copyURLHandler = (urlId) => { 
-    console.log("clicked copy for ", urlId)  
 
     const urlClicked = this.state.shortenURL.shortened.find(item => item.id === urlId)
     const urlClickedIndex = this.state.shortenURL.shortened.findIndex(item => item.id === urlId)
@@ -145,7 +142,6 @@ class  App extends React.Component  {
           shortened : shortened
         }
       }))
-      console.log('copied')
     }
   }
   render (){
