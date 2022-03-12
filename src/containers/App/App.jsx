@@ -17,22 +17,6 @@ class  App extends React.Component  {
       value : "" , 
       showError : false , 
       shortened : [
-        /*{  
-          mainURL : 'http://https%3A%2F%2Fwww.geeksforgeeks.org%2F' ,
-          shortenedURL : 'https://rel.link/kkkdkdk' , 
-          statusText : 'Copied' , 
-          id: '2334' },
-        
-          {  mainURL : 'http://localhost:3000/url-shortener' ,
-          shortenedURL : 'https://rel.link/kkkdkdk' , 
-          statusText : 'Copied' , 
-          id: '2334' },
-
-          {  mainURL : 'http://localhost:3000/url-shortener' ,
-          shortenedURL : 'https://rel.link/kkkdkdk' , 
-          statusText : 'Copied' , 
-          id: '2334' }, */
-        
       ] 
     }
   }
@@ -114,7 +98,7 @@ class  App extends React.Component  {
                     mainURL : data.original_link , 
                     shortenedURL :data.full_short_link3 , 
                     statusText : "Copy",  
-                    id : data.code
+                    id : data.code + Math.floor(Math.random() * 100 )
                   })
                 }
              }
@@ -147,9 +131,19 @@ class  App extends React.Component  {
   render (){
     return (
       <main className="App"> 
-      <Nav isMobileDevice={this.state.nav.widthForMobileDevice} showMobileNav={this.state.nav.showMobileNav} toggleMobileNav={this.toggleMobileNav}/> 
+      <Nav 
+        isMobileDevice={this.state.nav.widthForMobileDevice} 
+        showMobileNav={this.state.nav.showMobileNav} 
+        toggleMobileNav={this.toggleMobileNav}/> 
       <Hero /> 
-      <Advanced showError={this.state.shortenURL.showError} clickCopy={this.copyURLHandler} clickShortenBtn={this.shortenURL} shortenedURL={this.state.shortenURL.shortened} shortenInputValue={this.state.shortenURL.value} handleInputChange={this.shortenInputChange}/> 
+      <Advanced 
+        showError={this.state.shortenURL.showError} 
+        clickCopy={this.copyURLHandler} 
+        clickShortenBtn={this.shortenURL} 
+        shortenedURL={this.state.shortenURL.shortened} 
+        shortenInputValue={this.state.shortenURL.value} 
+        handleInputChange={this.shortenInputChange}/> 
+
       <Boost />  
       <Footer /> 
       </main>

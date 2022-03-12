@@ -1,7 +1,8 @@
+
 import React from "react"
 import {ReactComponent as NavLogo } from './logo.svg'
 import MenuLogo from './001-menu.png'
-
+import  PropTypes from "prop-types"
 
 export const Nav = (props)=> { 
     const navItems = ['Features' , 'Pricing' , 'Resources ']
@@ -28,4 +29,10 @@ export const Nav = (props)=> {
             <img src={MenuLogo} alt='menu logo' width='35' height='35' className="nav__toggle-logo" onClick={props.toggleMobileNav}/> 
         </nav> 
     )
+}
+
+Nav.propTypes = { 
+    isMobileDevice : PropTypes.bool , 
+    showMobileNav : PropTypes.bool , 
+    toggleMobileNav : PropTypes.func 
 }

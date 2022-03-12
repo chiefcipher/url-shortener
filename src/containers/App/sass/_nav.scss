@@ -63,6 +63,9 @@
             }
             a { 
                 color : $c-grayish-violet ; 
+                &:hover { 
+                    color : $c-dark-violet
+                }
                 @media (max-width : 750px ) { 
                     color : #fff ;  
                 }
